@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonnets</title>
+
+    <link rel="stylesheet" href="https://nadir-software.github.io/nadircss/nadir.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="column">
+    <div class="navbar">
+        <h1>Shakespearean Sonnets</h1>
+    </div>
+
+    <div class="search-box">
+        <span class="material-symbols-rounded">search</span>
+
+        <input oninput="search(this.value)" class="input-search outline-none" type="number" placeholder="Search for sonnets">
+    </div>
+
+    <div id="sonnet-container" class="toolbar" style="flex-direction: column; gap: 0; display: none;">
+        <h3 id="sonnet-title"></h3>
+
+        <div id="sonnet-divider" class="toolbar-divider-horizontal"></div>
+
+        <p id="sonnet"></p>
+    </div>
+
+    <script src="sonnets.js"></script>
+</body>
+</html>
