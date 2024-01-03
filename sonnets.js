@@ -3240,40 +3240,40 @@ const sonnetTitleOutput = document.getElementById("sonnet-title");
 const sonnetDivider = document.getElementById("sonnet-divider");
 
 function search(sonnetNumber) {
-    // Check if sonnetNumber is valid
-    if (sonnetNumber >= 1 && sonnetNumber <= sonnets.length) {
-        // Subtract 1 from sonnetNumber to match array indexing
-        const index = sonnetNumber - 1;
+  // Check if sonnetNumber is valid
+  if (sonnetNumber >= 1 && sonnetNumber <= sonnets.length) {
+    // Subtract 1 from sonnetNumber to match array indexing
+    const index = sonnetNumber - 1;
 
-        // Get the relevant sonnet object
-        const sonnet = sonnets[index];
+    // Get the relevant sonnet object
+    const sonnet = sonnets[index];
 
-        // Join the lines of the sonnet into a single string with line breaks
-        const sonnetText = sonnet.lines.join("\n");
+    // Join the lines of the sonnet into a single string with line breaks
+    const sonnetText = sonnet.lines.join("\n");
 
-        // Format and display title
-        const sonnetTitle = sonnet.title;
-        sonnetTitleOutput.innerText = sonnetTitle;
+    // Format and display title
+    const sonnetTitle = sonnet.title;
+    sonnetTitleOutput.innerText = sonnetTitle;
 
-        // Set innerText of sonnetOutput to the sonnet text
-        sonnetOutput.innerText = sonnetText;
+    // Set innerText of sonnetOutput to the sonnet text
+    sonnetOutput.innerText = sonnetText;
 
-        // Display container
-        sonnetContainer.style.display = "flex";
-        sonnetDivider.style.display = "block";
-    }
+    // Display container
+    sonnetContainer.style.display = "flex";
+    sonnetDivider.style.display = "block";
+  }
 
-    else if (sonnetNumber == "") {
-        sonnetOutput.innerText = "";
-        sonnetTitleOutput.innerText = "";
+  else if (sonnetNumber == "") {
+    sonnetOutput.innerText = "";
+    sonnetTitleOutput.innerText = "";
 
-        sonnetContainer.style.display = "none";
-    }
+    sonnetContainer.style.display = "none";
+  }
     
-    else {
-        sonnetOutput.innerText = "Invalid sonnet number";
-        sonnetTitleOutput.innerText = "";
+  else {
+    sonnetOutput.innerText = "Invalid sonnet number";
+    sonnetTitleOutput.innerText = "";
 
-        sonnetDivider.style.display = "none";
-    }
+    sonnetDivider.style.display = "none";
+  }
 }
